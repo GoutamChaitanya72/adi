@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="categories.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Categories</title>
+</head>
+<body>
+  <header class="header-container">
+  <div class="header">
+    <h1>Categories</h1>
+  </div>
+  <div class="search">
+    <form action ="#">
+      <input type="text" id ="search-input" class="search-input" placeholder="Search Drug database">
+      <button id="button1">
+        <i class="fa fa-search search-icon"></i>
+      </button>
+      <a href="index.html"><button id="button2">
+        <i class="fa fa-arrow-left"></i>
+      </button></a>
+    </form>
+  </div>
+</header>
+  
+  
+  <div class="categories">
+      <ul>
+        <li>
+      <h4>AFI accredited medications</h4>
+        </li>
+        <li>
+      <h4>Ethical Medications</h4>
+        </li>
+    </ul>
+  </div>
+  <script>
+    // Select the search icon element
+    var icon = $(".search-icon");
+    // Add a click function to the search icon
+    icon.click(function() {
+      // Toggle the display of the input field
+      $(".search-input").toggle();
+      // Rotate the search icon by 90 degrees
+      icon.toggleClass("fa-rotate-90");
+      
+      $(".header").toggle();
+    });
+  </script>
+</body>
+</html>
